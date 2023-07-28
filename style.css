@@ -1,0 +1,283 @@
+
+body, ul, li, img, p {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-family:  sans-serif;
+}
+
+
+li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+
+a, i {
+  text-decoration: none;
+  color: #888;
+  font-size: 13px;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+header {
+  display: flex;
+  height: 60px;
+  background-color: #f1f1f1; 
+}
+
+header a {
+  color: #333;
+}
+
+header ul {
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+header #logo {
+  grid-column: 1 / 2; 
+}
+
+header #back_to_main {
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+
+
+section {
+  height: 75vh;
+  padding: 0 40px;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+
+.container form {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: 
+      "h3 ."
+      "label1 input1"
+      "label2 input2"
+      "label3 input3"
+      "label4 input4"
+      ". button";
+  align-items: center;
+  justify-items: stretch;
+}
+
+
+h2 {
+  color: #d93025;
+  font-size: 21px;
+  font-weight: 400;
+  padding: 0px ;
+  border-bottom: 1px solid #eee;
+  margin: 0px;
+}
+
+h3 { 
+  font-size: 16px;
+  grid-area: h3;
+  font-weight: 400;
+}
+
+
+label {
+  font-size: 14px;
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  border-radius: 1px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  font-size: 13px;
+  height: 25px;
+  padding: 1px 8px;
+}
+
+
+.label_item1 { grid-area: label1; }
+.input_item1 { grid-area: input1; }
+.label_item2 { grid-area: label2; }
+.input_item2 { grid-area: input2; }
+.label_item3 { grid-area: label3; }
+.input_item3 { grid-area: input3; }
+.label_item4 { grid-area: label4; }
+.input_item4 { grid-area: input4; }
+.button {   
+  grid-area: button;  
+  justify-self: end;
+}
+
+.button > input {
+  color: #eee;
+  border: 1px solid #aaa;
+  line-height: 27px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #4d90fe;
+  width: 120px;
+  height: 30px;
+  transition: box-shadow 0.3s;
+}
+
+.button > input:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Footer styles */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer1, .footer2 {
+  background: #f7f7f7;
+  padding: 20px 1.5em;
+}
+
+.footer1 {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer1 ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer2 ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Additional styles */
+#navdiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+  background-color: #fff;
+}
+
+#links-container {
+  display: flex;
+}
+
+#links-container a {
+  color: #000000; 
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+#links-container a:hover {
+  background-color: #fff;
+}
+
+#navdiv a {
+  color: #1a0dab;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-in-container {
+  margin-left: 16px;
+}
+
+#googleimg {
+  display: block;
+  margin: 170px auto 50px;
+  width: 272px;
+  height: 92px;
+}
+
+#maindiv {
+  display: flex;
+  justify-content: center;
+}
+
+#inputspan {
+  position: relative;
+  border: 1px solid #3c4043;
+  border-radius: 24px;
+  padding: 10px 14px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#inputspan input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 500px;
+}
+
+#search-button {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button img {
+  width: 41px;
+  height: 35px;
+}
+
+
+section button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  padding: 10px 20px;
+  margin: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+section button:hover {
+  background-color: #EFEFEF;
+}
+
+#sign-in-button {
+  background-color: #006dd9;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}

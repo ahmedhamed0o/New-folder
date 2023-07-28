@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Google</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav>
+    <div id="navdiv">
+      <div id="links-container">
+        <a href="https://mail.google.com/" class="c">Gmail</a>
+        <a href="#" class="c" onclick="redirectToAdvancedHtml()">Advanced</a>
+        <a href="#" class="c" onclick="redirectToImgHtml()">Images</a>
+      </div>
+      <div id="sign-in-container">
+        <a href="https://www.google.com/accounts/Login" id="sign-in-button">Sign In</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <center>
+      <img src="google.png" id="googleimg" alt="Google">
+      <div>
+        <div id="maindiv">
+          <form action="https://www.google.com/search" method="GET">
+            <span id="inputspan">
+              <input type="text" name="q" aria-label="Search">
+              <button id="search-button" type="submit"><img src="icon.png" alt="Search"></button>
+            </span>
+          </form>
+        </div>
+      </div>
+      <section>
+      <a href="#" class="button-link" onclick="googleSearch()"><button type="submit">Google Search</button></a>
+        <a href="https://www.google.com/doodles" class="button-link"><button type="submit">I'm feeling lucky</button></a>
+     </center>
+  </main>
+</body>
+<script>
+  function redirectToAdvancedHtml() {
+    window.location.href = "advanced.html";
+  }
+    function googleSearch() {
+      var searchTerm = document.querySelector('#inputspan input').value;
+      var encodedSearchTerm = encodeURIComponent(searchTerm);
+      var googleSearchUrl = 'https://www.google.com/search?q=' + encodedSearchTerm;
+      window.location.href = googleSearchUrl;
+    }
+
+  function redirectToImgHtml() {
+    window.location.href = "image.html";
+  }
+</script>
+</html>
