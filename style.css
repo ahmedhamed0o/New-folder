@@ -60,8 +60,7 @@ header #back_to_main {
 
 
 section {
-  height: 75vh;
-  padding: 0 40px;
+padding: 0 40px;
   justify-content: center;
   margin: 20px;
 
@@ -106,7 +105,7 @@ label {
 
 /* Input styles */
 input {
-  width: 100%;
+  width: 517px;
   border-radius: 1px;
   border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
@@ -280,4 +279,12 @@ section button:hover {
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
+}
+.changes {
+margin: 10px;
+}
+.sen1{
+  display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
